@@ -37,7 +37,9 @@ namespace EstacionMonitoreo.V4._0
         bool IsOpen = false;
         /// graficas
         static public double velocidad = 0.0;
-        static public double aceleracion = 0.0;
+        static public double aceleracionx = 0.0;
+        static public double aceleraciony = 0.0;
+        static public double aceleracionz = 0.0;
         static public double altura = 0.0;
         static public string presion = "0.0";
         static public string Temperatura = "0.0";
@@ -55,6 +57,7 @@ namespace EstacionMonitoreo.V4._0
             renderView1.SetUpVector(Axis.YAxis);
             box = new Cylinder(2, 5);
             tr = scene.RootNode.CreateChildNode("C",box).Transform;
+           
 
 
         }
@@ -166,12 +169,14 @@ namespace EstacionMonitoreo.V4._0
                     string[] arreglo = datos_puerto.Split(';');
                     // datos recibidos y transformados a tipo bouble
                     altura = Convert.ToDouble(arreglo[0], formatProvider);
-                    aceleracion = Convert.ToDouble(arreglo[1], formatProvider);
-                    velocidad = Convert.ToDouble(arreglo[2], formatProvider);
-                    Orientacion_x = arreglo[5];
-                    Orientacion_y = arreglo[6];
-                    presion = arreglo[3];
-                    Temperatura = arreglo[4];
+                    aceleracionx = Convert.ToDouble(arreglo[1], formatProvider);
+                    aceleraciony = Convert.ToDouble(arreglo[2], formatProvider);
+                    aceleracionz = Convert.ToDouble(arreglo[3], formatProvider);
+                    velocidad = Convert.ToDouble(arreglo[4], formatProvider);
+                    presion = arreglo[5];
+                    Temperatura = arreglo[6];
+                    Orientacion_x = arreglo[7];
+                    Orientacion_y = arreglo[8];
 
                     Console.WriteLine(arreglo[0]);
                     Console.WriteLine(arreglo[1]);
@@ -180,9 +185,11 @@ namespace EstacionMonitoreo.V4._0
                     Console.WriteLine(arreglo[4]);
                     Console.WriteLine(arreglo[5]);
                     Console.WriteLine(arreglo[6]);
+                    Console.WriteLine(arreglo[7]);
+                    Console.WriteLine(arreglo[8]);
                     Console.WriteLine("-----");
                     Console.WriteLine(altura);
-                    Console.WriteLine(aceleracion);
+                    Console.WriteLine(aceleracionx);
                     Console.WriteLine(velocidad);
 
                 }
@@ -190,7 +197,9 @@ namespace EstacionMonitoreo.V4._0
                 {
                     altura = 0.0;
                     velocidad = 0.0;
-                    aceleracion = 0.0;
+                    aceleracionx = 0.0;
+                    aceleraciony = 0.0;
+                    aceleracionz = 0.0;
                     presion = "0.0";
                     Temperatura = "0.0";
                     Orientacion_x = "0.0";
@@ -202,32 +211,48 @@ namespace EstacionMonitoreo.V4._0
             {
                 altura = 0.0;
                 velocidad = 0.0;
-                aceleracion = 0.0;
+                aceleracionx = 0.0;
+                aceleraciony = 0.0;
+                aceleracionz = 0.0;
                 presion = "0.0";
                 Temperatura = "0.0";
                 Orientacion_x = "0.0";
-                Orientacion_y = "0.0";
+                Orientacion_y = "0.0"; 
                 MessageBox.Show("falla en actualizar");
 
             }
 
         }
-
+        graficacion.grafica obj_graficacion0 = new graficacion.grafica();
+        graficacion.grafica obj_graficacion1X = new graficacion.grafica();
+        graficacion.grafica obj_graficacion1Y = new graficacion.grafica();
+        graficacion.grafica obj_graficacion1Z = new graficacion.grafica();
+        graficacion.grafica obj_graficacion2 = new graficacion.grafica();
+      
         private void clok_Tick(object sender, EventArgs e)
-        {
-
+        {    
             tr.Translation = new Vector3(0, 5, 0);
             //tr = scene.RootNode.CreateChildNode(box).Transform;
             //// Scale transform
             tr.Scale = new Vector3(1, 1, 1);
             // Set Euler Angles
-            tr.EulerAngles = new Vector3(Convert.ToDouble(Orientacion_x) * 100, Convert.ToDouble(Orientacion_y) * 100, 50);
+            tr.EulerAngles = new Vector3(Convert.ToDouble(Orientacion_x)*10,0, -Convert.ToDouble(Orientacion_y)*10);// ajuste (x,z,-y)  //argumento en °
             tiempo++;
-            htiemp.Series[0].Points.AddXY(tiempo, altura);
-            Atiem.Series[0].Points.AddXY(tiempo, aceleracion);
-            Vtiem.Series[0].Points.AddXY(tiempo, velocidad);
+            obj_graficacion0.pxy(tiempo, altura, 0);
+            obj_graficacion0.grafico(htiemp);
+            //htiemp.Series[0].Points.AddXY(tiempo, altura);
+            obj_graficacion1X.pxy(tiempo, aceleracionx, 0);
+            obj_graficacion1X.grafico(Atiem);
+            obj_graficacion1Y.pxy(tiempo, aceleraciony, 1);
+            obj_graficacion1Y.grafico(Atiem);
+            obj_graficacion1Z.pxy(tiempo, aceleracionz, 2);
+            obj_graficacion1Z.grafico(Atiem);
+            // Atiem.Series[0].Points.AddXY(tiempo, aceleracion);
+            //Vtiem.Series[0].Points.AddXY(tiempo, velocidad);
+            obj_graficacion2.pxy(tiempo, velocidad, 0);
+            obj_graficacion2.grafico(Vtiem);
             label11.Text = velocidad.ToString();
-            label9.Text = aceleracion.ToString();
+            label9.Text = aceleracionx.ToString();
             label7.Text = altura.ToString();
             label14.Text = Orientacion_x;
             label20.Text = Orientacion_y;
@@ -277,11 +302,15 @@ namespace EstacionMonitoreo.V4._0
 
                     htiemp.Series[0].Points.Clear();
                     Atiem.Series[0].Points.Clear();
+                    Atiem.Series[1].Points.Clear();
+                    Atiem.Series[2].Points.Clear();
                     Vtiem.Series[0].Points.Clear();
                     datos_puerto = "$0.0;0.0;0.0;0.0;0.0;0,0;0.0";
                     tiempo = 0.0;
                     velocidad = 0.0;
-                    aceleracion = 0.0;
+                    aceleracionx = 0.0;
+                    aceleraciony = 0.0;
+                    aceleracionz = 0.0;
                     altura = 0.0;
                     presion = "0.0";
                     Temperatura = "0.0";

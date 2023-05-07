@@ -32,13 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(INICIO));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.SpaceVoyager = new System.Windows.Forms.Panel();
             this.max = new System.Windows.Forms.PictureBox();
             this.minimizar = new System.Windows.Forms.PictureBox();
@@ -214,7 +216,7 @@
             this.CONTROL.Controls.Add(this.panel2);
             this.CONTROL.Controls.Add(this.button1);
             this.CONTROL.Dock = System.Windows.Forms.DockStyle.Left;
-            this.CONTROL.Font = new System.Drawing.Font("Monospac821 BT", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CONTROL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CONTROL.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.CONTROL.Location = new System.Drawing.Point(0, 32);
             this.CONTROL.Name = "CONTROL";
@@ -412,7 +414,7 @@
             "115200"});
             this.BAUDIOS.Location = new System.Drawing.Point(29, 184);
             this.BAUDIOS.Name = "BAUDIOS";
-            this.BAUDIOS.Size = new System.Drawing.Size(222, 22);
+            this.BAUDIOS.Size = new System.Drawing.Size(222, 21);
             this.BAUDIOS.TabIndex = 6;
             // 
             // panel8
@@ -461,7 +463,7 @@
             "COM 4"});
             this.PUERTOS.Location = new System.Drawing.Point(29, 126);
             this.PUERTOS.Name = "PUERTOS";
-            this.PUERTOS.Size = new System.Drawing.Size(222, 22);
+            this.PUERTOS.Size = new System.Drawing.Size(222, 21);
             this.PUERTOS.TabIndex = 6;
             // 
             // panel3
@@ -635,17 +637,17 @@
         System.Drawing.Color.DeepPink,
         System.Drawing.Color.Teal,
         System.Drawing.Color.SlateBlue};
-            series4.BorderWidth = 2;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            series4.LabelBackColor = System.Drawing.Color.White;
-            series4.LabelBorderColor = System.Drawing.Color.Black;
-            series4.Legend = "Legend1";
-            series4.LegendText = "Velocidad";
-            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series4.Name = "Velocidad";
-            this.Vtiem.Series.Add(series4);
+            series6.BorderWidth = 2;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            series6.LabelBackColor = System.Drawing.Color.White;
+            series6.LabelBorderColor = System.Drawing.Color.Black;
+            series6.Legend = "Legend1";
+            series6.LegendText = "Velocidad";
+            series6.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
+            series6.Name = "Velocidad";
+            this.Vtiem.Series.Add(series6);
             this.Vtiem.Size = new System.Drawing.Size(335, 286);
             this.Vtiem.TabIndex = 88;
             this.Vtiem.Text = "chart2";
@@ -717,17 +719,31 @@
         System.Drawing.Color.DeepPink,
         System.Drawing.Color.Teal,
         System.Drawing.Color.SlateBlue};
-            series5.BorderWidth = 2;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            series5.LabelBackColor = System.Drawing.Color.White;
-            series5.LabelBorderColor = System.Drawing.Color.Black;
-            series5.Legend = "Legend1";
-            series5.LegendText = "Aceleración";
-            series5.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series5.Name = "Aceleracion";
-            this.Atiem.Series.Add(series5);
+            series7.BorderWidth = 2;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            series7.LabelBackColor = System.Drawing.Color.White;
+            series7.LabelBorderColor = System.Drawing.Color.Black;
+            series7.Legend = "Legend1";
+            series7.LegendText = "AceleraciónX";
+            series7.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series7.Name = "AceleracionX";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series8.Color = System.Drawing.Color.Red;
+            series8.Legend = "Legend1";
+            series8.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series8.Name = "AceleracionY";
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series9.Color = System.Drawing.Color.Lime;
+            series9.Legend = "Legend1";
+            series9.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series9.Name = "AceleracionZ";
+            this.Atiem.Series.Add(series7);
+            this.Atiem.Series.Add(series8);
+            this.Atiem.Series.Add(series9);
             this.Atiem.Size = new System.Drawing.Size(379, 286);
             this.Atiem.TabIndex = 87;
             this.Atiem.Text = "chart2";
@@ -798,17 +814,17 @@
         System.Drawing.Color.DeepPink,
         System.Drawing.Color.Teal,
         System.Drawing.Color.SlateBlue};
-            series6.BorderWidth = 2;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            series6.LabelBackColor = System.Drawing.Color.White;
-            series6.LabelBorderColor = System.Drawing.Color.Black;
-            series6.Legend = "Legend1";
-            series6.LegendText = "Altura";
-            series6.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series6.Name = "haltura";
-            this.htiemp.Series.Add(series6);
+            series10.BorderWidth = 2;
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            series10.LabelBackColor = System.Drawing.Color.White;
+            series10.LabelBorderColor = System.Drawing.Color.Black;
+            series10.Legend = "Legend1";
+            series10.LegendText = "Altura";
+            series10.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
+            series10.Name = "haltura";
+            this.htiemp.Series.Add(series10);
             this.htiemp.Size = new System.Drawing.Size(379, 321);
             this.htiemp.TabIndex = 86;
             this.htiemp.Text = "chart2";
