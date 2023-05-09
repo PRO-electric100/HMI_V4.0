@@ -30,28 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(INICIO));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.SpaceVoyager = new System.Windows.Forms.Panel();
             this.max = new System.Windows.Forms.PictureBox();
             this.minimizar = new System.Windows.Forms.PictureBox();
             this.maximisar = new System.Windows.Forms.PictureBox();
             this.salir = new System.Windows.Forms.PictureBox();
             this.CONTROL = new System.Windows.Forms.Panel();
-            this.ruta = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.rutaT = new System.Windows.Forms.Label();
-            this.rutaD = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.TiempoIntervalo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label16 = new System.Windows.Forms.Label();
             this.bunifuPictureBox3 = new Bunifu.UI.WinForms.BunifuPictureBox();
@@ -100,20 +96,19 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.bunifuCards6 = new Bunifu.Framework.UI.BunifuCards();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.TiempoReloj = new System.Windows.Forms.Timer(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.SpaceVoyager.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximisar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salir)).BeginInit();
             this.CONTROL.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ruta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
@@ -202,10 +197,6 @@
             // CONTROL
             // 
             this.CONTROL.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.CONTROL.Controls.Add(this.ruta);
-            this.CONTROL.Controls.Add(this.panel7);
-            this.CONTROL.Controls.Add(this.rutaT);
-            this.CONTROL.Controls.Add(this.rutaD);
             this.CONTROL.Controls.Add(this.TiempoIntervalo);
             this.CONTROL.Controls.Add(this.label16);
             this.CONTROL.Controls.Add(this.bunifuPictureBox3);
@@ -236,60 +227,6 @@
             this.CONTROL.Name = "CONTROL";
             this.CONTROL.Size = new System.Drawing.Size(278, 712);
             this.CONTROL.TabIndex = 11;
-            // 
-            // ruta
-            // 
-            this.ruta.Image = global::EstacionMonitoreo.V4._0.Properties.Resources.guardar;
-            this.ruta.Location = new System.Drawing.Point(28, 461);
-            this.ruta.Name = "ruta";
-            this.ruta.Size = new System.Drawing.Size(42, 39);
-            this.ruta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ruta.TabIndex = 18;
-            this.ruta.TabStop = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.panel7.Location = new System.Drawing.Point(13, 454);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 52);
-            this.panel7.TabIndex = 13;
-            // 
-            // rutaT
-            // 
-            this.rutaT.AutoSize = true;
-            this.rutaT.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rutaT.Location = new System.Drawing.Point(79, 445);
-            this.rutaT.Name = "rutaT";
-            this.rutaT.Size = new System.Drawing.Size(29, 16);
-            this.rutaT.TabIndex = 30;
-            this.rutaT.Text = "ruta";
-            this.rutaT.Click += new System.EventHandler(this.label17_Click);
-            // 
-            // rutaD
-            // 
-            this.rutaD.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.rutaD.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.rutaD.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rutaD.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.rutaD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.rutaD.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.rutaD.ForeColor = System.Drawing.Color.Cyan;
-            this.rutaD.HintForeColor = System.Drawing.Color.Empty;
-            this.rutaD.HintText = "";
-            this.rutaD.isPassword = false;
-            this.rutaD.LineFocusedColor = System.Drawing.Color.Orange;
-            this.rutaD.LineIdleColor = System.Drawing.Color.Cyan;
-            this.rutaD.LineMouseHoverColor = System.Drawing.Color.Lime;
-            this.rutaD.LineThickness = 3;
-            this.rutaD.Location = new System.Drawing.Point(77, 465);
-            this.rutaD.Margin = new System.Windows.Forms.Padding(4);
-            this.rutaD.MaxLength = 32767;
-            this.rutaD.Name = "rutaD";
-            this.rutaD.Size = new System.Drawing.Size(183, 33);
-            this.rutaD.TabIndex = 29;
-            this.rutaD.Text = "Escritorio";
-            this.rutaD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TiempoIntervalo
             // 
@@ -661,25 +598,25 @@
             // 
             this.Vtiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.Vtiem.BorderlineColor = System.Drawing.SystemColors.Window;
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.LightGray;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea1.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.LightGray;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea1.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea1.CursorX.LineColor = System.Drawing.Color.Blue;
-            chartArea1.CursorY.LineColor = System.Drawing.Color.Blue;
-            chartArea1.Name = "ChartArea1";
-            this.Vtiem.ChartAreas.Add(chartArea1);
+            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
+            chartArea4.AxisX.LineColor = System.Drawing.Color.LightGray;
+            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea4.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
+            chartArea4.AxisY.LineColor = System.Drawing.Color.LightGray;
+            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea4.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea4.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea4.CursorX.LineColor = System.Drawing.Color.Blue;
+            chartArea4.CursorY.LineColor = System.Drawing.Color.Blue;
+            chartArea4.Name = "ChartArea1";
+            this.Vtiem.ChartAreas.Add(chartArea4);
             this.Vtiem.Cursor = System.Windows.Forms.Cursors.Default;
-            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            legend1.ForeColor = System.Drawing.Color.LightGray;
-            legend1.Name = "Legend1";
-            this.Vtiem.Legends.Add(legend1);
+            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            legend4.ForeColor = System.Drawing.Color.LightGray;
+            legend4.Name = "Legend1";
+            this.Vtiem.Legends.Add(legend4);
             this.Vtiem.Location = new System.Drawing.Point(3, 15);
             this.Vtiem.Name = "Vtiem";
             this.Vtiem.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -706,25 +643,25 @@
         System.Drawing.Color.DeepPink,
         System.Drawing.Color.Teal,
         System.Drawing.Color.SlateBlue};
-            series1.BorderWidth = 2;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            series1.LabelBackColor = System.Drawing.Color.White;
-            series1.LabelBorderColor = System.Drawing.Color.Black;
-            series1.Legend = "Legend1";
-            series1.LegendText = "Velocidad Lineal";
-            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series1.Name = "Velocidad Lineal";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Color = System.Drawing.Color.Lime;
-            series2.Legend = "Legend1";
-            series2.LegendText = "Aceleración Lineal";
-            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series2.Name = "Aceleración Lineal";
-            this.Vtiem.Series.Add(series1);
-            this.Vtiem.Series.Add(series2);
+            series7.BorderWidth = 2;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            series7.LabelBackColor = System.Drawing.Color.White;
+            series7.LabelBorderColor = System.Drawing.Color.Black;
+            series7.Legend = "Legend1";
+            series7.LegendText = "Velocidad Lineal";
+            series7.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series7.Name = "Velocidad Lineal";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series8.Color = System.Drawing.Color.Lime;
+            series8.Legend = "Legend1";
+            series8.LegendText = "Aceleración Lineal";
+            series8.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series8.Name = "Aceleración Lineal";
+            this.Vtiem.Series.Add(series7);
+            this.Vtiem.Series.Add(series8);
             this.Vtiem.Size = new System.Drawing.Size(425, 331);
             this.Vtiem.TabIndex = 88;
             this.Vtiem.Text = "chart2";
@@ -753,23 +690,23 @@
             // 
             this.Atiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.Atiem.BorderlineColor = System.Drawing.SystemColors.Window;
-            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
-            chartArea2.AxisX.LineColor = System.Drawing.Color.LightGray;
-            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea2.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
-            chartArea2.AxisY.LineColor = System.Drawing.Color.LightGray;
-            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea2.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea2.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea2.Name = "ChartArea1";
-            this.Atiem.ChartAreas.Add(chartArea2);
+            chartArea5.AxisX.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
+            chartArea5.AxisX.LineColor = System.Drawing.Color.LightGray;
+            chartArea5.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea5.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea5.AxisY.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
+            chartArea5.AxisY.LineColor = System.Drawing.Color.LightGray;
+            chartArea5.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea5.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea5.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea5.Name = "ChartArea1";
+            this.Atiem.ChartAreas.Add(chartArea5);
             this.Atiem.Cursor = System.Windows.Forms.Cursors.Default;
-            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            legend2.ForeColor = System.Drawing.Color.LightGray;
-            legend2.Name = "Legend1";
-            this.Atiem.Legends.Add(legend2);
+            legend5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            legend5.ForeColor = System.Drawing.Color.LightGray;
+            legend5.Name = "Legend1";
+            this.Atiem.Legends.Add(legend5);
             this.Atiem.Location = new System.Drawing.Point(12, 13);
             this.Atiem.Name = "Atiem";
             this.Atiem.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -796,28 +733,28 @@
         System.Drawing.Color.DeepPink,
         System.Drawing.Color.Teal,
         System.Drawing.Color.SlateBlue};
-            series3.BorderWidth = 2;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            series3.LabelBackColor = System.Drawing.Color.White;
-            series3.LabelBorderColor = System.Drawing.Color.Black;
-            series3.Legend = "Legend1";
-            series3.LegendText = "AceleraciónX";
-            series3.Name = "AceleracionX";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Color = System.Drawing.Color.Red;
-            series4.Legend = "Legend1";
-            series4.Name = "AceleracionY";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.Color = System.Drawing.Color.Lime;
-            series5.Legend = "Legend1";
-            series5.Name = "AceleracionZ";
-            this.Atiem.Series.Add(series3);
-            this.Atiem.Series.Add(series4);
-            this.Atiem.Series.Add(series5);
+            series9.BorderWidth = 2;
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series9.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            series9.LabelBackColor = System.Drawing.Color.White;
+            series9.LabelBorderColor = System.Drawing.Color.Black;
+            series9.Legend = "Legend1";
+            series9.LegendText = "AceleraciónX";
+            series9.Name = "AceleracionX";
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series10.Color = System.Drawing.Color.Red;
+            series10.Legend = "Legend1";
+            series10.Name = "AceleracionY";
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series11.Color = System.Drawing.Color.Lime;
+            series11.Legend = "Legend1";
+            series11.Name = "AceleracionZ";
+            this.Atiem.Series.Add(series9);
+            this.Atiem.Series.Add(series10);
+            this.Atiem.Series.Add(series11);
             this.Atiem.Size = new System.Drawing.Size(379, 286);
             this.Atiem.TabIndex = 87;
             this.Atiem.Text = "chart2";
@@ -845,23 +782,23 @@
             // 
             this.htiemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.htiemp.BorderlineColor = System.Drawing.SystemColors.Window;
-            chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisX.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea3.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea3.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea3.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea3.Name = "ChartArea1";
-            this.htiemp.ChartAreas.Add(chartArea3);
+            chartArea6.AxisX.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
+            chartArea6.AxisX.LineColor = System.Drawing.Color.LightGray;
+            chartArea6.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea6.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea6.AxisY.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
+            chartArea6.AxisY.LineColor = System.Drawing.Color.LightGray;
+            chartArea6.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea6.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea6.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea6.Name = "ChartArea1";
+            this.htiemp.ChartAreas.Add(chartArea6);
             this.htiemp.Cursor = System.Windows.Forms.Cursors.Default;
-            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            legend3.ForeColor = System.Drawing.Color.LightGray;
-            legend3.Name = "Legend1";
-            this.htiemp.Legends.Add(legend3);
+            legend6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            legend6.ForeColor = System.Drawing.Color.LightGray;
+            legend6.Name = "Legend1";
+            this.htiemp.Legends.Add(legend6);
             this.htiemp.Location = new System.Drawing.Point(12, 25);
             this.htiemp.Name = "htiemp";
             this.htiemp.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -888,16 +825,16 @@
         System.Drawing.Color.DeepPink,
         System.Drawing.Color.Teal,
         System.Drawing.Color.SlateBlue};
-            series6.BorderWidth = 2;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            series6.LabelBackColor = System.Drawing.Color.White;
-            series6.LabelBorderColor = System.Drawing.Color.Black;
-            series6.Legend = "Legend1";
-            series6.LegendText = "Altura";
-            series6.Name = "Altura";
-            this.htiemp.Series.Add(series6);
+            series12.BorderWidth = 2;
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            series12.LabelBackColor = System.Drawing.Color.White;
+            series12.LabelBorderColor = System.Drawing.Color.Black;
+            series12.Legend = "Legend1";
+            series12.LegendText = "Altura";
+            series12.Name = "Altura";
+            this.htiemp.Series.Add(series12);
             this.htiemp.Size = new System.Drawing.Size(379, 321);
             this.htiemp.TabIndex = 86;
             this.htiemp.Text = "chart2";
@@ -1134,6 +1071,31 @@
             this.bunifuCards6.Size = new System.Drawing.Size(276, 244);
             this.bunifuCards6.TabIndex = 32;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Black;
+            this.label18.Font = new System.Drawing.Font("ISOCP3_IV25", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(171, 208);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(44, 36);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "0.0";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Black;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label17.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.label17.Location = new System.Drawing.Point(12, 215);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(116, 17);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "Orientación Z  [°]";
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -1186,31 +1148,6 @@
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Black;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label17.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.label17.Location = new System.Drawing.Point(12, 215);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(116, 17);
-            this.label17.TabIndex = 12;
-            this.label17.Text = "Orientación Z  [°]";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Black;
-            this.label18.Font = new System.Drawing.Font("ISOCP3_IV25", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(171, 208);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(44, 36);
-            this.label18.TabIndex = 13;
-            this.label18.Text = "0.0";
-            // 
             // INICIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1236,7 +1173,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.salir)).EndInit();
             this.CONTROL.ResumeLayout(false);
             this.CONTROL.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ruta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
@@ -1320,10 +1256,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Timer TiempoReloj;
-        private System.Windows.Forms.Label rutaT;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox rutaD;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.PictureBox ruta;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Controls.RenderView renderView1;
         private System.Windows.Forms.Label label18;
