@@ -332,6 +332,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ABUtils.cs" />
+    <Compile Include="BaseDatos\CrearDataCsv.cs" />
     <Compile Include="Controls\FileListView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -551,6 +552,7 @@
     <Content Include="Renderers\Resources\Viewport_1.bmp" />
     <Content Include="Renderers\Resources\Viewport_2.bmp" />
     <Content Include="Renderers\Resources\Viewport_4.bmp" />
+    <None Include="Resources\guardar.png" />
     <None Include="Resources\conectar1.png" />
     <None Include="Resources\icons8-actualizar-32 %281%29.png" />
     <None Include="Resources\Viewport_1.bmp" />

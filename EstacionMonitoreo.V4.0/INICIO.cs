@@ -40,11 +40,21 @@ namespace EstacionMonitoreo.V4._0
         static public double aceleracionx = 0.0;
         static public double aceleraciony = 0.0;
         static public double aceleracionz = 0.0;
+        static public double aceleracionL = 0.0;
+        
         static public double altura = 0.0;
         static public string presion = "0.0";
         static public string Temperatura = "0.0";
         static public string Orientacion_x = "0.0";
         static public string Orientacion_y = "0.0";
+        static public string Orientacion_z = "0.0";
+        //-------------graficas----------------------
+        graficacion.grafica obj_graficacion0 = new graficacion.grafica();
+        graficacion.grafica obj_graficacion1X = new graficacion.grafica();
+        graficacion.grafica obj_graficacion1Y = new graficacion.grafica();
+        graficacion.grafica obj_graficacion1Z = new graficacion.grafica();
+        graficacion.grafica obj_graficacion21 = new graficacion.grafica();
+        graficacion.grafica obj_graficacion22 = new graficacion.grafica();
         //-------------DATOS*----------------
         private Scene scene = new Scene();
         public Cylinder box = new Cylinder();
@@ -172,11 +182,13 @@ namespace EstacionMonitoreo.V4._0
                     aceleracionx = Convert.ToDouble(arreglo[1], formatProvider);
                     aceleraciony = Convert.ToDouble(arreglo[2], formatProvider);
                     aceleracionz = Convert.ToDouble(arreglo[3], formatProvider);
-                    velocidad = Convert.ToDouble(arreglo[4], formatProvider);
-                    presion = arreglo[5];
-                    Temperatura = arreglo[6];
-                    Orientacion_x = arreglo[7];
-                    Orientacion_y = arreglo[8];
+                    aceleracionL = Convert.ToDouble(arreglo[4], formatProvider);
+                    velocidad = Convert.ToDouble(arreglo[5], formatProvider);
+                    presion = arreglo[6];
+                    Temperatura = arreglo[7];
+                    Orientacion_x = arreglo[8];
+                    Orientacion_y = arreglo[9];
+                    Orientacion_z = arreglo[10];
 
                     Console.WriteLine(arreglo[0]);
                     Console.WriteLine(arreglo[1]);
@@ -187,10 +199,9 @@ namespace EstacionMonitoreo.V4._0
                     Console.WriteLine(arreglo[6]);
                     Console.WriteLine(arreglo[7]);
                     Console.WriteLine(arreglo[8]);
+                    Console.WriteLine(arreglo[9]);
+                    Console.WriteLine(arreglo[10]);
                     Console.WriteLine("-----");
-                    Console.WriteLine(altura);
-                    Console.WriteLine(aceleracionx);
-                    Console.WriteLine(velocidad);
 
                 }
                 else
@@ -200,10 +211,12 @@ namespace EstacionMonitoreo.V4._0
                     aceleracionx = 0.0;
                     aceleraciony = 0.0;
                     aceleracionz = 0.0;
+                    aceleracionL = 0.0;
                     presion = "0.0";
                     Temperatura = "0.0";
                     Orientacion_x = "0.0";
                     Orientacion_y = "0.0";
+                    Orientacion_z = "0.0";
                 }
 
             }
@@ -214,21 +227,18 @@ namespace EstacionMonitoreo.V4._0
                 aceleracionx = 0.0;
                 aceleraciony = 0.0;
                 aceleracionz = 0.0;
+                aceleracionL = 0.0;
                 presion = "0.0";
                 Temperatura = "0.0";
                 Orientacion_x = "0.0";
-                Orientacion_y = "0.0"; 
+                Orientacion_y = "0.0";
+                Orientacion_z = "0.0";
                 MessageBox.Show("falla en actualizar");
 
             }
 
         }
-        graficacion.grafica obj_graficacion0 = new graficacion.grafica();
-        graficacion.grafica obj_graficacion1X = new graficacion.grafica();
-        graficacion.grafica obj_graficacion1Y = new graficacion.grafica();
-        graficacion.grafica obj_graficacion1Z = new graficacion.grafica();
-        graficacion.grafica obj_graficacion2 = new graficacion.grafica();
-      
+
         private void clok_Tick(object sender, EventArgs e)
         {    
             tr.Translation = new Vector3(0, 5, 0);
@@ -236,7 +246,7 @@ namespace EstacionMonitoreo.V4._0
             //// Scale transform
             tr.Scale = new Vector3(1, 1, 1);
             // Set Euler Angles
-            tr.EulerAngles = new Vector3(Convert.ToDouble(Orientacion_x)*10,0, -Convert.ToDouble(Orientacion_y)*10);// ajuste (x,z,-y)  //argumento en °
+            tr.EulerAngles = new Vector3(Convert.ToDouble(Orientacion_x), Convert.ToDouble(Orientacion_z), -Convert.ToDouble(Orientacion_y));// ajuste (x,z,-y)  //argumento en °
             tiempo++;
             obj_graficacion0.pxy(tiempo, altura, 0);
             obj_graficacion0.grafico(htiemp);
@@ -249,13 +259,16 @@ namespace EstacionMonitoreo.V4._0
             obj_graficacion1Z.grafico(Atiem);
             // Atiem.Series[0].Points.AddXY(tiempo, aceleracion);
             //Vtiem.Series[0].Points.AddXY(tiempo, velocidad);
-            obj_graficacion2.pxy(tiempo, velocidad, 0);
-            obj_graficacion2.grafico(Vtiem);
+            obj_graficacion21.pxy(tiempo, velocidad, 0);
+            obj_graficacion21.grafico(Vtiem);
+            obj_graficacion22.pxy(tiempo, aceleracionL, 1);
+            obj_graficacion22.grafico(Vtiem);
             label11.Text = velocidad.ToString();
             label9.Text = aceleracionx.ToString();
             label7.Text = altura.ToString();
             label14.Text = Orientacion_x;
             label20.Text = Orientacion_y;
+            label18.Text = Orientacion_z;
 
             //uso de circle bar temperatura
             string[] textSplit = Temperatura.Split('.');
@@ -305,17 +318,20 @@ namespace EstacionMonitoreo.V4._0
                     Atiem.Series[1].Points.Clear();
                     Atiem.Series[2].Points.Clear();
                     Vtiem.Series[0].Points.Clear();
+                    Vtiem.Series[1].Points.Clear();
                     datos_puerto = "$0.0;0.0;0.0;0.0;0.0;0,0;0.0";
                     tiempo = 0.0;
                     velocidad = 0.0;
                     aceleracionx = 0.0;
                     aceleraciony = 0.0;
                     aceleracionz = 0.0;
+                    aceleracionL = 0.0;
                     altura = 0.0;
                     presion = "0.0";
                     Temperatura = "0.0";
                     Orientacion_x = "0.0";
                     Orientacion_y = "0.0";
+                    Orientacion_z = "0.0";
                     puerto.Close();
                 }
 
@@ -403,6 +419,16 @@ namespace EstacionMonitoreo.V4._0
         private void TiempoReloj_Tick(object sender, EventArgs e)
         {
             reloj.Text = DateTime.Now.ToString("hh:mm:ss tt");
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuPictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

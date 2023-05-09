@@ -1,0 +1,27 @@
+void setup() {
+  Serial.begin(38400);
+}
+float a=1;
+float bx=10;
+float by=20;
+float bz=30;
+float c=3;
+float d=0.2;
+float e=0.2;
+float x=0.6;
+float y=0.6;
+float gr= PI/180;
+void loop() {
+  a++;
+  bx++;
+    by++;
+      bz++;
+  c++;
+  d++;
+  e++;
+  x++;
+  y++;
+  String s ='$'+String(sin(gr*a))+';'+String(sin(gr*bx))+';'+String(sin(gr*by))+';'+String(sin(gr*bz))+';'+String(sin(gr*c))+';'+String(10*sin(gr*d))+';'+String(10*sin(gr*e))+';'+String(sin(gr*x))+';'+String(sin(gr*y));
+  Serial.println(s);
+  delay(10);
+}

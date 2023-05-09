@@ -30,23 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(INICIO));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.SpaceVoyager = new System.Windows.Forms.Panel();
             this.max = new System.Windows.Forms.PictureBox();
             this.minimizar = new System.Windows.Forms.PictureBox();
             this.maximisar = new System.Windows.Forms.PictureBox();
             this.salir = new System.Windows.Forms.PictureBox();
             this.CONTROL = new System.Windows.Forms.Panel();
+            this.ruta = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.rutaT = new System.Windows.Forms.Label();
+            this.rutaD = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.TiempoIntervalo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label16 = new System.Windows.Forms.Label();
             this.bunifuPictureBox3 = new Bunifu.UI.WinForms.BunifuPictureBox();
@@ -99,12 +104,16 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.TiempoReloj = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.SpaceVoyager.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximisar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salir)).BeginInit();
             this.CONTROL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ruta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
@@ -120,6 +129,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.htiemp)).BeginInit();
             this.bunifuCards1.SuspendLayout();
             this.bunifuCards6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // SpaceVoyager
@@ -132,7 +142,7 @@
             this.SpaceVoyager.Dock = System.Windows.Forms.DockStyle.Top;
             this.SpaceVoyager.Location = new System.Drawing.Point(0, 0);
             this.SpaceVoyager.Name = "SpaceVoyager";
-            this.SpaceVoyager.Size = new System.Drawing.Size(1369, 32);
+            this.SpaceVoyager.Size = new System.Drawing.Size(1429, 32);
             this.SpaceVoyager.TabIndex = 10;
             this.SpaceVoyager.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SpaceVoyager_MouseDown);
             // 
@@ -141,7 +151,7 @@
             this.max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.max.Cursor = System.Windows.Forms.Cursors.Hand;
             this.max.Image = ((System.Drawing.Image)(resources.GetObject("max.Image")));
-            this.max.Location = new System.Drawing.Point(1299, 3);
+            this.max.Location = new System.Drawing.Point(1359, 3);
             this.max.Name = "max";
             this.max.Size = new System.Drawing.Size(25, 25);
             this.max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -155,7 +165,7 @@
             this.minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(1270, 3);
+            this.minimizar.Location = new System.Drawing.Point(1330, 3);
             this.minimizar.Name = "minimizar";
             this.minimizar.Size = new System.Drawing.Size(25, 25);
             this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -168,7 +178,7 @@
             this.maximisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maximisar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.maximisar.Image = ((System.Drawing.Image)(resources.GetObject("maximisar.Image")));
-            this.maximisar.Location = new System.Drawing.Point(1301, 3);
+            this.maximisar.Location = new System.Drawing.Point(1361, 3);
             this.maximisar.Name = "maximisar";
             this.maximisar.Size = new System.Drawing.Size(25, 25);
             this.maximisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -181,7 +191,7 @@
             this.salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.salir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.salir.Image = ((System.Drawing.Image)(resources.GetObject("salir.Image")));
-            this.salir.Location = new System.Drawing.Point(1332, 3);
+            this.salir.Location = new System.Drawing.Point(1392, 3);
             this.salir.Name = "salir";
             this.salir.Size = new System.Drawing.Size(25, 25);
             this.salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -192,6 +202,10 @@
             // CONTROL
             // 
             this.CONTROL.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.CONTROL.Controls.Add(this.ruta);
+            this.CONTROL.Controls.Add(this.panel7);
+            this.CONTROL.Controls.Add(this.rutaT);
+            this.CONTROL.Controls.Add(this.rutaD);
             this.CONTROL.Controls.Add(this.TiempoIntervalo);
             this.CONTROL.Controls.Add(this.label16);
             this.CONTROL.Controls.Add(this.bunifuPictureBox3);
@@ -223,6 +237,60 @@
             this.CONTROL.Size = new System.Drawing.Size(278, 712);
             this.CONTROL.TabIndex = 11;
             // 
+            // ruta
+            // 
+            this.ruta.Image = global::EstacionMonitoreo.V4._0.Properties.Resources.guardar;
+            this.ruta.Location = new System.Drawing.Point(28, 461);
+            this.ruta.Name = "ruta";
+            this.ruta.Size = new System.Drawing.Size(42, 39);
+            this.ruta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ruta.TabIndex = 18;
+            this.ruta.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panel7.Location = new System.Drawing.Point(13, 454);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(10, 52);
+            this.panel7.TabIndex = 13;
+            // 
+            // rutaT
+            // 
+            this.rutaT.AutoSize = true;
+            this.rutaT.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rutaT.Location = new System.Drawing.Point(79, 445);
+            this.rutaT.Name = "rutaT";
+            this.rutaT.Size = new System.Drawing.Size(29, 16);
+            this.rutaT.TabIndex = 30;
+            this.rutaT.Text = "ruta";
+            this.rutaT.Click += new System.EventHandler(this.label17_Click);
+            // 
+            // rutaD
+            // 
+            this.rutaD.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.rutaD.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.rutaD.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rutaD.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.rutaD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rutaD.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.rutaD.ForeColor = System.Drawing.Color.Cyan;
+            this.rutaD.HintForeColor = System.Drawing.Color.Empty;
+            this.rutaD.HintText = "";
+            this.rutaD.isPassword = false;
+            this.rutaD.LineFocusedColor = System.Drawing.Color.Orange;
+            this.rutaD.LineIdleColor = System.Drawing.Color.Cyan;
+            this.rutaD.LineMouseHoverColor = System.Drawing.Color.Lime;
+            this.rutaD.LineThickness = 3;
+            this.rutaD.Location = new System.Drawing.Point(77, 465);
+            this.rutaD.Margin = new System.Windows.Forms.Padding(4);
+            this.rutaD.MaxLength = 32767;
+            this.rutaD.Name = "rutaD";
+            this.rutaD.Size = new System.Drawing.Size(183, 33);
+            this.rutaD.TabIndex = 29;
+            this.rutaD.Text = "Escritorio";
+            this.rutaD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // TiempoIntervalo
             // 
             this.TiempoIntervalo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
@@ -243,7 +311,7 @@
             this.TiempoIntervalo.Margin = new System.Windows.Forms.Padding(4);
             this.TiempoIntervalo.MaxLength = 32767;
             this.TiempoIntervalo.Name = "TiempoIntervalo";
-            this.TiempoIntervalo.Size = new System.Drawing.Size(141, 33);
+            this.TiempoIntervalo.Size = new System.Drawing.Size(162, 33);
             this.TiempoIntervalo.TabIndex = 28;
             this.TiempoIntervalo.Text = "1000";
             this.TiempoIntervalo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -266,20 +334,21 @@
             this.bunifuPictureBox3.BorderRadius = 21;
             this.bunifuPictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox3.Image")));
             this.bunifuPictureBox3.IsCircle = true;
-            this.bunifuPictureBox3.Location = new System.Drawing.Point(39, 385);
+            this.bunifuPictureBox3.Location = new System.Drawing.Point(36, 396);
             this.bunifuPictureBox3.Name = "bunifuPictureBox3";
             this.bunifuPictureBox3.Size = new System.Drawing.Size(42, 42);
             this.bunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox3.TabIndex = 26;
             this.bunifuPictureBox3.TabStop = false;
             this.bunifuPictureBox3.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.bunifuPictureBox3.Click += new System.EventHandler(this.bunifuPictureBox3_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.panel5.Location = new System.Drawing.Point(13, 385);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 47);
+            this.panel5.Size = new System.Drawing.Size(10, 53);
             this.panel5.TabIndex = 25;
             // 
             // reloj
@@ -300,10 +369,10 @@
             this.PauseReanu.CheckedSwitchColor = System.Drawing.Color.Black;
             this.PauseReanu.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
             this.PauseReanu.ForeColor = System.Drawing.Color.Aquamarine;
-            this.PauseReanu.Location = new System.Drawing.Point(180, 342);
+            this.PauseReanu.Location = new System.Drawing.Point(162, 342);
             this.PauseReanu.Name = "PauseReanu";
             this.PauseReanu.OutlineThickness = 2;
-            this.PauseReanu.Size = new System.Drawing.Size(59, 38);
+            this.PauseReanu.Size = new System.Drawing.Size(77, 38);
             this.PauseReanu.TabIndex = 23;
             this.PauseReanu.UncheckedBackColor = System.Drawing.Color.Black;
             this.PauseReanu.UncheckedSwitchColor = System.Drawing.Color.Teal;
@@ -354,10 +423,10 @@
             this.ConecDesc.CheckedSwitchColor = System.Drawing.Color.Black;
             this.ConecDesc.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
             this.ConecDesc.ForeColor = System.Drawing.Color.Aquamarine;
-            this.ConecDesc.Location = new System.Drawing.Point(180, 278);
+            this.ConecDesc.Location = new System.Drawing.Point(162, 278);
             this.ConecDesc.Name = "ConecDesc";
             this.ConecDesc.OutlineThickness = 2;
-            this.ConecDesc.Size = new System.Drawing.Size(59, 36);
+            this.ConecDesc.Size = new System.Drawing.Size(77, 36);
             this.ConecDesc.TabIndex = 17;
             this.ConecDesc.UncheckedBackColor = System.Drawing.Color.Black;
             this.ConecDesc.UncheckedSwitchColor = System.Drawing.Color.Teal;
@@ -368,7 +437,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(94, 289);
+            this.label3.Location = new System.Drawing.Point(79, 289);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 16);
             this.label3.TabIndex = 20;
@@ -382,7 +451,7 @@
             this.bunifuPictureBox1.BorderRadius = 22;
             this.bunifuPictureBox1.Image = global::EstacionMonitoreo.V4._0.Properties.Resources.conectar1;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(36, 270);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(25, 271);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(45, 45);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -537,7 +606,7 @@
             this.panel6.Controls.Add(this.toolStrip1);
             this.panel6.Location = new System.Drawing.Point(977, 39);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(380, 318);
+            this.panel6.Size = new System.Drawing.Size(428, 318);
             this.panel6.TabIndex = 12;
             // 
             // renderView1
@@ -549,7 +618,7 @@
             this.renderView1.Location = new System.Drawing.Point(13, 41);
             this.renderView1.Name = "renderView1";
             this.renderView1.ShiftPressed = false;
-            this.renderView1.Size = new System.Drawing.Size(355, 266);
+            this.renderView1.Size = new System.Drawing.Size(396, 266);
             this.renderView1.TabIndex = 14;
             this.renderView1.Text = "renderView1";
             // 
@@ -560,7 +629,7 @@
             this.btnOrbital});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(380, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(428, 25);
             this.toolStrip1.TabIndex = 13;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -585,37 +654,219 @@
             this.bunifuCards4.RightSahddow = true;
             this.bunifuCards4.RightShadow = true;
             this.bunifuCards4.ShadowDepth = 20;
-            this.bunifuCards4.Size = new System.Drawing.Size(380, 358);
+            this.bunifuCards4.Size = new System.Drawing.Size(440, 358);
             this.bunifuCards4.TabIndex = 28;
             // 
             // Vtiem
             // 
             this.Vtiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.Vtiem.BorderlineColor = System.Drawing.SystemColors.Window;
-            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisX.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea4.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisY.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea4.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea4.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea4.CursorX.LineColor = System.Drawing.Color.Blue;
-            chartArea4.CursorY.LineColor = System.Drawing.Color.Blue;
-            chartArea4.Name = "ChartArea1";
-            this.Vtiem.ChartAreas.Add(chartArea4);
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea1.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea1.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea1.CursorX.LineColor = System.Drawing.Color.Blue;
+            chartArea1.CursorY.LineColor = System.Drawing.Color.Blue;
+            chartArea1.Name = "ChartArea1";
+            this.Vtiem.ChartAreas.Add(chartArea1);
             this.Vtiem.Cursor = System.Windows.Forms.Cursors.Default;
-            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            legend4.ForeColor = System.Drawing.Color.LightGray;
-            legend4.Name = "Legend1";
-            this.Vtiem.Legends.Add(legend4);
-            this.Vtiem.Location = new System.Drawing.Point(23, 26);
+            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            legend1.ForeColor = System.Drawing.Color.LightGray;
+            legend1.Name = "Legend1";
+            this.Vtiem.Legends.Add(legend1);
+            this.Vtiem.Location = new System.Drawing.Point(3, 15);
             this.Vtiem.Name = "Vtiem";
             this.Vtiem.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.Vtiem.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.Blue,
+        System.Drawing.Color.Blue,
+        System.Drawing.Color.Green,
+        System.Drawing.Color.Magenta,
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.Black,
+        System.Drawing.Color.Yellow,
+        System.Drawing.Color.Purple,
+        System.Drawing.Color.Maroon,
+        System.Drawing.SystemColors.Highlight,
+        System.Drawing.Color.Indigo,
+        System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.Olive,
+        System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.LightCoral,
+        System.Drawing.Color.Gold,
+        System.Drawing.Color.GreenYellow,
+        System.Drawing.Color.DarkTurquoise,
+        System.Drawing.Color.DarkKhaki,
+        System.Drawing.Color.DeepPink,
+        System.Drawing.Color.Teal,
+        System.Drawing.Color.SlateBlue};
+            series1.BorderWidth = 2;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            series1.LabelBackColor = System.Drawing.Color.White;
+            series1.LabelBorderColor = System.Drawing.Color.Black;
+            series1.Legend = "Legend1";
+            series1.LegendText = "Velocidad Lineal";
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series1.Name = "Velocidad Lineal";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Color = System.Drawing.Color.Lime;
+            series2.Legend = "Legend1";
+            series2.LegendText = "Aceleración Lineal";
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series2.Name = "Aceleración Lineal";
+            this.Vtiem.Series.Add(series1);
+            this.Vtiem.Series.Add(series2);
+            this.Vtiem.Size = new System.Drawing.Size(425, 331);
+            this.Vtiem.TabIndex = 88;
+            this.Vtiem.Text = "chart2";
+            this.Vtiem.Click += new System.EventHandler(this.Vtiem_Click);
+            // 
+            // bunifuCards2
+            // 
+            this.bunifuCards2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.bunifuCards2.BorderRadius = 5;
+            this.bunifuCards2.BottomSahddow = true;
+            this.bunifuCards2.BottomShadow = true;
+            this.bunifuCards2.color = System.Drawing.Color.DarkBlue;
+            this.bunifuCards2.Controls.Add(this.Atiem);
+            this.bunifuCards2.IndicatorColor = System.Drawing.Color.DarkBlue;
+            this.bunifuCards2.LeftSahddow = false;
+            this.bunifuCards2.LeftShadow = false;
+            this.bunifuCards2.Location = new System.Drawing.Point(566, 38);
+            this.bunifuCards2.Name = "bunifuCards2";
+            this.bunifuCards2.RightSahddow = true;
+            this.bunifuCards2.RightShadow = true;
+            this.bunifuCards2.ShadowDepth = 20;
+            this.bunifuCards2.Size = new System.Drawing.Size(405, 319);
+            this.bunifuCards2.TabIndex = 29;
+            // 
+            // Atiem
+            // 
+            this.Atiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Atiem.BorderlineColor = System.Drawing.SystemColors.Window;
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisX.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea2.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisY.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea2.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea2.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea2.Name = "ChartArea1";
+            this.Atiem.ChartAreas.Add(chartArea2);
+            this.Atiem.Cursor = System.Windows.Forms.Cursors.Default;
+            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            legend2.ForeColor = System.Drawing.Color.LightGray;
+            legend2.Name = "Legend1";
+            this.Atiem.Legends.Add(legend2);
+            this.Atiem.Location = new System.Drawing.Point(12, 13);
+            this.Atiem.Name = "Atiem";
+            this.Atiem.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.Atiem.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Red,
+        System.Drawing.Color.Blue,
+        System.Drawing.Color.Green,
+        System.Drawing.Color.Magenta,
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.Black,
+        System.Drawing.Color.Yellow,
+        System.Drawing.Color.Purple,
+        System.Drawing.Color.Maroon,
+        System.Drawing.SystemColors.Highlight,
+        System.Drawing.Color.Indigo,
+        System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.Olive,
+        System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.LightCoral,
+        System.Drawing.Color.Gold,
+        System.Drawing.Color.GreenYellow,
+        System.Drawing.Color.DarkTurquoise,
+        System.Drawing.Color.DarkKhaki,
+        System.Drawing.Color.DeepPink,
+        System.Drawing.Color.Teal,
+        System.Drawing.Color.SlateBlue};
+            series3.BorderWidth = 2;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            series3.LabelBackColor = System.Drawing.Color.White;
+            series3.LabelBorderColor = System.Drawing.Color.Black;
+            series3.Legend = "Legend1";
+            series3.LegendText = "AceleraciónX";
+            series3.Name = "AceleracionX";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series4.Color = System.Drawing.Color.Red;
+            series4.Legend = "Legend1";
+            series4.Name = "AceleracionY";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series5.Color = System.Drawing.Color.Lime;
+            series5.Legend = "Legend1";
+            series5.Name = "AceleracionZ";
+            this.Atiem.Series.Add(series3);
+            this.Atiem.Series.Add(series4);
+            this.Atiem.Series.Add(series5);
+            this.Atiem.Size = new System.Drawing.Size(379, 286);
+            this.Atiem.TabIndex = 87;
+            this.Atiem.Text = "chart2";
+            // 
+            // bunifuCards3
+            // 
+            this.bunifuCards3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.bunifuCards3.BorderRadius = 5;
+            this.bunifuCards3.BottomSahddow = true;
+            this.bunifuCards3.BottomShadow = true;
+            this.bunifuCards3.color = System.Drawing.Color.DarkBlue;
+            this.bunifuCards3.Controls.Add(this.htiemp);
+            this.bunifuCards3.IndicatorColor = System.Drawing.Color.DarkBlue;
+            this.bunifuCards3.LeftSahddow = false;
+            this.bunifuCards3.LeftShadow = false;
+            this.bunifuCards3.Location = new System.Drawing.Point(566, 374);
+            this.bunifuCards3.Name = "bunifuCards3";
+            this.bunifuCards3.RightSahddow = true;
+            this.bunifuCards3.RightShadow = true;
+            this.bunifuCards3.ShadowDepth = 20;
+            this.bunifuCards3.Size = new System.Drawing.Size(405, 358);
+            this.bunifuCards3.TabIndex = 30;
+            // 
+            // htiemp
+            // 
+            this.htiemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.htiemp.BorderlineColor = System.Drawing.SystemColors.Window;
+            chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
+            chartArea3.AxisX.LineColor = System.Drawing.Color.LightGray;
+            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea3.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
+            chartArea3.AxisY.LineColor = System.Drawing.Color.LightGray;
+            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea3.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea3.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            chartArea3.Name = "ChartArea1";
+            this.htiemp.ChartAreas.Add(chartArea3);
+            this.htiemp.Cursor = System.Windows.Forms.Cursors.Default;
+            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            legend3.ForeColor = System.Drawing.Color.LightGray;
+            legend3.Name = "Legend1";
+            this.htiemp.Legends.Add(legend3);
+            this.htiemp.Location = new System.Drawing.Point(12, 25);
+            this.htiemp.Name = "htiemp";
+            this.htiemp.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.htiemp.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Red,
         System.Drawing.Color.Blue,
         System.Drawing.Color.Green,
         System.Drawing.Color.Magenta,
@@ -644,187 +895,9 @@
             series6.LabelBackColor = System.Drawing.Color.White;
             series6.LabelBorderColor = System.Drawing.Color.Black;
             series6.Legend = "Legend1";
-            series6.LegendText = "Velocidad";
-            series6.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series6.Name = "Velocidad";
-            this.Vtiem.Series.Add(series6);
-            this.Vtiem.Size = new System.Drawing.Size(335, 286);
-            this.Vtiem.TabIndex = 88;
-            this.Vtiem.Text = "chart2";
-            this.Vtiem.Click += new System.EventHandler(this.Vtiem_Click);
-            // 
-            // bunifuCards2
-            // 
-            this.bunifuCards2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.bunifuCards2.BorderRadius = 5;
-            this.bunifuCards2.BottomSahddow = true;
-            this.bunifuCards2.BottomShadow = true;
-            this.bunifuCards2.color = System.Drawing.Color.DarkBlue;
-            this.bunifuCards2.Controls.Add(this.Atiem);
-            this.bunifuCards2.IndicatorColor = System.Drawing.Color.DarkBlue;
-            this.bunifuCards2.LeftSahddow = false;
-            this.bunifuCards2.LeftShadow = false;
-            this.bunifuCards2.Location = new System.Drawing.Point(566, 38);
-            this.bunifuCards2.Name = "bunifuCards2";
-            this.bunifuCards2.RightSahddow = true;
-            this.bunifuCards2.RightShadow = true;
-            this.bunifuCards2.ShadowDepth = 20;
-            this.bunifuCards2.Size = new System.Drawing.Size(405, 319);
-            this.bunifuCards2.TabIndex = 29;
-            // 
-            // Atiem
-            // 
-            this.Atiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Atiem.BorderlineColor = System.Drawing.SystemColors.Window;
-            chartArea5.AxisX.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
-            chartArea5.AxisX.LineColor = System.Drawing.Color.LightGray;
-            chartArea5.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea5.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea5.AxisY.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
-            chartArea5.AxisY.LineColor = System.Drawing.Color.LightGray;
-            chartArea5.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea5.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea5.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea5.Name = "ChartArea1";
-            this.Atiem.ChartAreas.Add(chartArea5);
-            this.Atiem.Cursor = System.Windows.Forms.Cursors.Default;
-            legend5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            legend5.ForeColor = System.Drawing.Color.LightGray;
-            legend5.Name = "Legend1";
-            this.Atiem.Legends.Add(legend5);
-            this.Atiem.Location = new System.Drawing.Point(12, 13);
-            this.Atiem.Name = "Atiem";
-            this.Atiem.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.Atiem.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.Red,
-        System.Drawing.Color.Blue,
-        System.Drawing.Color.Green,
-        System.Drawing.Color.Magenta,
-        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0))))),
-        System.Drawing.Color.Black,
-        System.Drawing.Color.Yellow,
-        System.Drawing.Color.Purple,
-        System.Drawing.Color.Maroon,
-        System.Drawing.SystemColors.Highlight,
-        System.Drawing.Color.Indigo,
-        System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
-        System.Drawing.Color.Olive,
-        System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0))))),
-        System.Drawing.Color.LightCoral,
-        System.Drawing.Color.Gold,
-        System.Drawing.Color.GreenYellow,
-        System.Drawing.Color.DarkTurquoise,
-        System.Drawing.Color.DarkKhaki,
-        System.Drawing.Color.DeepPink,
-        System.Drawing.Color.Teal,
-        System.Drawing.Color.SlateBlue};
-            series7.BorderWidth = 2;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            series7.LabelBackColor = System.Drawing.Color.White;
-            series7.LabelBorderColor = System.Drawing.Color.Black;
-            series7.Legend = "Legend1";
-            series7.LegendText = "AceleraciónX";
-            series7.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series7.Name = "AceleracionX";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series8.Color = System.Drawing.Color.Red;
-            series8.Legend = "Legend1";
-            series8.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series8.Name = "AceleracionY";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series9.Color = System.Drawing.Color.Lime;
-            series9.Legend = "Legend1";
-            series9.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series9.Name = "AceleracionZ";
-            this.Atiem.Series.Add(series7);
-            this.Atiem.Series.Add(series8);
-            this.Atiem.Series.Add(series9);
-            this.Atiem.Size = new System.Drawing.Size(379, 286);
-            this.Atiem.TabIndex = 87;
-            this.Atiem.Text = "chart2";
-            // 
-            // bunifuCards3
-            // 
-            this.bunifuCards3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.bunifuCards3.BorderRadius = 5;
-            this.bunifuCards3.BottomSahddow = true;
-            this.bunifuCards3.BottomShadow = true;
-            this.bunifuCards3.color = System.Drawing.Color.DarkBlue;
-            this.bunifuCards3.Controls.Add(this.htiemp);
-            this.bunifuCards3.IndicatorColor = System.Drawing.Color.DarkBlue;
-            this.bunifuCards3.LeftSahddow = false;
-            this.bunifuCards3.LeftShadow = false;
-            this.bunifuCards3.Location = new System.Drawing.Point(566, 374);
-            this.bunifuCards3.Name = "bunifuCards3";
-            this.bunifuCards3.RightSahddow = true;
-            this.bunifuCards3.RightShadow = true;
-            this.bunifuCards3.ShadowDepth = 20;
-            this.bunifuCards3.Size = new System.Drawing.Size(405, 358);
-            this.bunifuCards3.TabIndex = 30;
-            // 
-            // htiemp
-            // 
-            this.htiemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.htiemp.BorderlineColor = System.Drawing.SystemColors.Window;
-            chartArea6.AxisX.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
-            chartArea6.AxisX.LineColor = System.Drawing.Color.LightGray;
-            chartArea6.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea6.AxisX2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea6.AxisY.LabelStyle.ForeColor = System.Drawing.Color.LightGray;
-            chartArea6.AxisY.LineColor = System.Drawing.Color.LightGray;
-            chartArea6.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea6.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea6.AxisY2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            chartArea6.Name = "ChartArea1";
-            this.htiemp.ChartAreas.Add(chartArea6);
-            this.htiemp.Cursor = System.Windows.Forms.Cursors.Default;
-            legend6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            legend6.ForeColor = System.Drawing.Color.LightGray;
-            legend6.Name = "Legend1";
-            this.htiemp.Legends.Add(legend6);
-            this.htiemp.Location = new System.Drawing.Point(12, 25);
-            this.htiemp.Name = "htiemp";
-            this.htiemp.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.htiemp.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.Red,
-        System.Drawing.Color.Blue,
-        System.Drawing.Color.Green,
-        System.Drawing.Color.Magenta,
-        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0))))),
-        System.Drawing.Color.Black,
-        System.Drawing.Color.Yellow,
-        System.Drawing.Color.Purple,
-        System.Drawing.Color.Maroon,
-        System.Drawing.SystemColors.Highlight,
-        System.Drawing.Color.Indigo,
-        System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))),
-        System.Drawing.Color.Olive,
-        System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0))))),
-        System.Drawing.Color.LightCoral,
-        System.Drawing.Color.Gold,
-        System.Drawing.Color.GreenYellow,
-        System.Drawing.Color.DarkTurquoise,
-        System.Drawing.Color.DarkKhaki,
-        System.Drawing.Color.DeepPink,
-        System.Drawing.Color.Teal,
-        System.Drawing.Color.SlateBlue};
-            series10.BorderWidth = 2;
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            series10.LabelBackColor = System.Drawing.Color.White;
-            series10.LabelBorderColor = System.Drawing.Color.Black;
-            series10.Legend = "Legend1";
-            series10.LegendText = "Altura";
-            series10.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series10.Name = "haltura";
-            this.htiemp.Series.Add(series10);
+            series6.LegendText = "Altura";
+            series6.Name = "Altura";
+            this.htiemp.Series.Add(series6);
             this.htiemp.Size = new System.Drawing.Size(379, 321);
             this.htiemp.TabIndex = 86;
             this.htiemp.Text = "chart2";
@@ -869,12 +942,12 @@
             this.bunifuCircleProgress2.AnimationSpeed = 1;
             this.bunifuCircleProgress2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCircleProgress2.CircleMargin = 10;
-            this.bunifuCircleProgress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold);
+            this.bunifuCircleProgress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
             this.bunifuCircleProgress2.ForeColor = System.Drawing.Color.White;
             this.bunifuCircleProgress2.IsPercentage = false;
             this.bunifuCircleProgress2.LineProgressThickness = 10;
             this.bunifuCircleProgress2.LineThickness = 10;
-            this.bunifuCircleProgress2.Location = new System.Drawing.Point(42, 252);
+            this.bunifuCircleProgress2.Location = new System.Drawing.Point(29, 252);
             this.bunifuCircleProgress2.Maximum = 1000;
             this.bunifuCircleProgress2.Name = "bunifuCircleProgress2";
             this.bunifuCircleProgress2.ProgressAnimationSpeed = 200;
@@ -885,13 +958,13 @@
             this.bunifuCircleProgress2.ProgressFillStyle = Bunifu.UI.WinForms.BunifuCircleProgress.FillStyles.Solid;
             this.bunifuCircleProgress2.ProgressStartCap = Bunifu.UI.WinForms.BunifuCircleProgress.CapStyles.Round;
             this.bunifuCircleProgress2.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.bunifuCircleProgress2.Size = new System.Drawing.Size(173, 173);
+            this.bunifuCircleProgress2.Size = new System.Drawing.Size(186, 186);
             this.bunifuCircleProgress2.SubScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.bunifuCircleProgress2.SubScriptMargin = new System.Windows.Forms.Padding(5, -20, 0, 0);
             this.bunifuCircleProgress2.SubScriptText = ".00";
             this.bunifuCircleProgress2.SuperScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.bunifuCircleProgress2.SuperScriptMargin = new System.Windows.Forms.Padding(5, 20, 0, 0);
-            this.bunifuCircleProgress2.SuperScriptText = "psi";
+            this.bunifuCircleProgress2.SuperScriptMargin = new System.Windows.Forms.Padding(5, 2, 0, 0);
+            this.bunifuCircleProgress2.SuperScriptText = "hPa";
             this.bunifuCircleProgress2.TabIndex = 16;
             this.bunifuCircleProgress2.Text = "30";
             this.bunifuCircleProgress2.TextMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -912,7 +985,6 @@
             this.bunifuCircleProgress1.LineProgressThickness = 10;
             this.bunifuCircleProgress1.LineThickness = 10;
             this.bunifuCircleProgress1.Location = new System.Drawing.Point(40, 41);
-            this.bunifuCircleProgress1.Maximum = 1000;
             this.bunifuCircleProgress1.Name = "bunifuCircleProgress1";
             this.bunifuCircleProgress1.ProgressAnimationSpeed = 200;
             this.bunifuCircleProgress1.ProgressBackColor = System.Drawing.Color.Gray;
@@ -1039,6 +1111,8 @@
             this.bunifuCards6.BottomSahddow = true;
             this.bunifuCards6.BottomShadow = true;
             this.bunifuCards6.color = System.Drawing.Color.Teal;
+            this.bunifuCards6.Controls.Add(this.label18);
+            this.bunifuCards6.Controls.Add(this.label17);
             this.bunifuCards6.Controls.Add(this.label20);
             this.bunifuCards6.Controls.Add(this.label15);
             this.bunifuCards6.Controls.Add(this.label14);
@@ -1066,7 +1140,7 @@
             this.label20.BackColor = System.Drawing.Color.Black;
             this.label20.Font = new System.Drawing.Font("ISOCP3_IV25", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(171, 180);
+            this.label20.Location = new System.Drawing.Point(171, 176);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(44, 36);
             this.label20.TabIndex = 11;
@@ -1079,7 +1153,7 @@
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label15.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.label15.Location = new System.Drawing.Point(13, 193);
+            this.label15.Location = new System.Drawing.Point(12, 180);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(116, 17);
             this.label15.TabIndex = 10;
@@ -1102,12 +1176,47 @@
             // 
             this.TiempoReloj.Tick += new System.EventHandler(this.TiempoReloj_Tick);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = global::EstacionMonitoreo.V4._0.Properties.Resources.guardar;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(278, 712);
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Black;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label17.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.label17.Location = new System.Drawing.Point(12, 215);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(116, 17);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "Orientación Z  [°]";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Black;
+            this.label18.Font = new System.Drawing.Font("ISOCP3_IV25", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(171, 208);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(44, 36);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "0.0";
+            // 
             // INICIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
-            this.ClientSize = new System.Drawing.Size(1369, 744);
+            this.ClientSize = new System.Drawing.Size(1429, 744);
             this.Controls.Add(this.bunifuCards6);
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.bunifuCards3);
@@ -1127,6 +1236,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.salir)).EndInit();
             this.CONTROL.ResumeLayout(false);
             this.CONTROL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ruta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
@@ -1146,6 +1256,7 @@
             this.bunifuCards1.PerformLayout();
             this.bunifuCards6.ResumeLayout(false);
             this.bunifuCards6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1192,7 +1303,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart Atiem;
         private Bunifu.Framework.UI.BunifuCards bunifuCards3;
         private System.Windows.Forms.DataVisualization.Charting.Chart htiemp;
-        private Controls.RenderView renderView1;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private System.Windows.Forms.Label label6;
         private Bunifu.UI.WinForms.BunifuCircleProgress bunifuCircleProgress2;
@@ -1210,5 +1320,13 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Timer TiempoReloj;
+        private System.Windows.Forms.Label rutaT;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox rutaD;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox ruta;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private Controls.RenderView renderView1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
     }
 }
